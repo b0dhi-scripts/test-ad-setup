@@ -1,0 +1,1 @@
+﻿Import-csv C:\Users\Administrator\Desktop\powershell\addADUsers\addUsers.csv | ForEach {Remove-ADUser -Identity $_.firstname -Confirm:$false}
