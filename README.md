@@ -1,5 +1,9 @@
 Once AD has been configured on winserver..
 
+- bulkUsersAdd needs the email domain and the dc name added to script
+- GroupsImport needs paths added
+- users.csv needs the DC name changed in the OU
+
 1. Create the different users that will be created in AD.
   - Stored in addUSers.csv
     - Change fields if desired
