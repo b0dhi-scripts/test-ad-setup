@@ -13,7 +13,7 @@ ForEach ($record in $users) {
     $fInitial = $fName.SubString(0,1)
     $lName = $record.lastname
     $uName = $($fInitial + $lName)
-    $emailAddr = $uName + "[insert email]"
+    $emailAddr = $uName + "[insert email domain <@domain.com>]"
     $strAddr = $record.streetaddress
     $city = $record.city
     $zipCode = $record.zipcode
@@ -43,7 +43,7 @@ ForEach ($record in $users) {
         -EmailAddress $emailAddr `
         -GivenName $fName `
         -Surname $lName `
-        -UserPrincipalName $uName@[dc name].local `
+        -UserPrincipalName $uName@<dc name>.local `
         -Path $ou `
         -AccountPassword (ConvertTo-SecureString $password -AsPlainText -Force) `
         -ChangePasswordAtLogon $False `
